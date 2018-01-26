@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		46A18BF02001257000607550 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A18BEF2001257000607550 /* AppDelegate.swift */; };
+		46A18BF22001257000607550 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A18BF12001257000607550 /* ViewController.swift */; };
+		46A18BF52001257000607550 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46A18BF32001257000607550 /* Main.storyboard */; };
+		46A18BF72001257000607550 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46A18BF62001257000607550 /* Assets.xcassets */; };
+		46A18BFA2001257000607550 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46A18BF82001257000607550 /* LaunchScreen.storyboard */; };
+		46A18C052001257000607550 /* Chicken_Coop_AttendantTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A18C042001257000607550 /* Chicken_Coop_AttendantTests.swift */; };
+		46A18C102001257000607550 /* Chicken_Coop_AttendantUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A18C0F2001257000607550 /* Chicken_Coop_AttendantUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		46A18C012001257000607550 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46A18BE42001257000607550 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 46A18BEB2001257000607550;
+			remoteInfo = "Chicken Coop Attendant";
+		};
+		46A18C0C2001257000607550 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46A18BE42001257000607550 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 46A18BEB2001257000607550;
+			remoteInfo = "Chicken Coop Attendant";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		46A18BEC2001257000607550 /* Chicken Coop Attendant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chicken Coop Attendant.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		46A18BEF2001257000607550 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		46A18BF12001257000607550 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		46A18BF42001257000607550 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		46A18BF62001257000607550 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		46A18BF92001257000607550 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		46A18BFB2001257000607550 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46A18C002001257000607550 /* Chicken Coop AttendantTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Chicken Coop AttendantTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		46A18C042001257000607550 /* Chicken_Coop_AttendantTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chicken_Coop_AttendantTests.swift; sourceTree = "<group>"; };
+		46A18C062001257000607550 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46A18C0B2001257000607550 /* Chicken Coop AttendantUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Chicken Coop AttendantUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		46A18C0F2001257000607550 /* Chicken_Coop_AttendantUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chicken_Coop_AttendantUITests.swift; sourceTree = "<group>"; };
+		46A18C112001257000607550 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		46A18BE92001257000607550 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46A18BFD2001257000607550 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46A18C082001257000607550 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		46A18BE32001257000607550 = {
+			isa = PBXGroup;
+			children = (
+				46A18BEE2001257000607550 /* Chicken Coop Attendant */,
+				46A18C032001257000607550 /* Chicken Coop AttendantTests */,
+				46A18C0E2001257000607550 /* Chicken Coop AttendantUITests */,
+				46A18BED2001257000607550 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		46A18BED2001257000607550 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				46A18BEC2001257000607550 /* Chicken Coop Attendant.app */,
+				46A18C002001257000607550 /* Chicken Coop AttendantTests.xctest */,
+				46A18C0B2001257000607550 /* Chicken Coop AttendantUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		46A18BEE2001257000607550 /* Chicken Coop Attendant */ = {
+			isa = PBXGroup;
+			children = (
+				46A18BEF2001257000607550 /* AppDelegate.swift */,
+				46A18BF12001257000607550 /* ViewController.swift */,
+				46A18BF32001257000607550 /* Main.storyboard */,
+				46A18BF62001257000607550 /* Assets.xcassets */,
+				46A18BF82001257000607550 /* LaunchScreen.storyboard */,
+				46A18BFB2001257000607550 /* Info.plist */,
+			);
+			path = "Chicken Coop Attendant";
+			sourceTree = "<group>";
+		};
+		46A18C032001257000607550 /* Chicken Coop AttendantTests */ = {
+			isa = PBXGroup;
+			children = (
+				46A18C042001257000607550 /* Chicken_Coop_AttendantTests.swift */,
+				46A18C062001257000607550 /* Info.plist */,
+			);
+			path = "Chicken Coop AttendantTests";
+			sourceTree = "<group>";
+		};
+		46A18C0E2001257000607550 /* Chicken Coop AttendantUITests */ = {
+			isa = PBXGroup;
+			children = (
+				46A18C0F2001257000607550 /* Chicken_Coop_AttendantUITests.swift */,
+				46A18C112001257000607550 /* Info.plist */,
+			);
+			path = "Chicken Coop AttendantUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		46A18BEB2001257000607550 /* Chicken Coop Attendant */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46A18C142001257000607550 /* Build configuration list for PBXNativeTarget "Chicken Coop Attendant" */;
+			buildPhases = (
+				46A18BE82001257000607550 /* Sources */,
+				46A18BE92001257000607550 /* Frameworks */,
+				46A18BEA2001257000607550 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Chicken Coop Attendant";
+			productName = "Chicken Coop Attendant";
+			productReference = 46A18BEC2001257000607550 /* Chicken Coop Attendant.app */;
+			productType = "com.apple.product-type.application";
+		};
+		46A18BFF2001257000607550 /* Chicken Coop AttendantTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46A18C172001257000607550 /* Build configuration list for PBXNativeTarget "Chicken Coop AttendantTests" */;
+			buildPhases = (
+				46A18BFC2001257000607550 /* Sources */,
+				46A18BFD2001257000607550 /* Frameworks */,
+				46A18BFE2001257000607550 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				46A18C022001257000607550 /* PBXTargetDependency */,
+			);
+			name = "Chicken Coop AttendantTests";
+			productName = "Chicken Coop AttendantTests";
+			productReference = 46A18C002001257000607550 /* Chicken Coop AttendantTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		46A18C0A2001257000607550 /* Chicken Coop AttendantUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46A18C1A2001257000607550 /* Build configuration list for PBXNativeTarget "Chicken Coop AttendantUITests" */;
+			buildPhases = (
+				46A18C072001257000607550 /* Sources */,
+				46A18C082001257000607550 /* Frameworks */,
+				46A18C092001257000607550 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				46A18C0D2001257000607550 /* PBXTargetDependency */,
+			);
+			name = "Chicken Coop AttendantUITests";
+			productName = "Chicken Coop AttendantUITests";
+			productReference = 46A18C0B2001257000607550 /* Chicken Coop AttendantUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		46A18BE42001257000607550 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = riOS;
+				TargetAttributes = {
+					46A18BEB2001257000607550 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					46A18BFF2001257000607550 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 46A18BEB2001257000607550;
+					};
+					46A18C0A2001257000607550 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 46A18BEB2001257000607550;
+					};
+				};
+			};
+			buildConfigurationList = 46A18BE72001257000607550 /* Build configuration list for PBXProject "Chicken Coop Attendant" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 46A18BE32001257000607550;
+			productRefGroup = 46A18BED2001257000607550 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				46A18BEB2001257000607550 /* Chicken Coop Attendant */,
+				46A18BFF2001257000607550 /* Chicken Coop AttendantTests */,
+				46A18C0A2001257000607550 /* Chicken Coop AttendantUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		46A18BEA2001257000607550 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46A18BFA2001257000607550 /* LaunchScreen.storyboard in Resources */,
+				46A18BF72001257000607550 /* Assets.xcassets in Resources */,
+				46A18BF52001257000607550 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46A18BFE2001257000607550 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46A18C092001257000607550 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		46A18BE82001257000607550 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46A18BF22001257000607550 /* ViewController.swift in Sources */,
+				46A18BF02001257000607550 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46A18BFC2001257000607550 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46A18C052001257000607550 /* Chicken_Coop_AttendantTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46A18C072001257000607550 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46A18C102001257000607550 /* Chicken_Coop_AttendantUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		46A18C022001257000607550 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 46A18BEB2001257000607550 /* Chicken Coop Attendant */;
+			targetProxy = 46A18C012001257000607550 /* PBXContainerItemProxy */;
+		};
+		46A18C0D2001257000607550 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 46A18BEB2001257000607550 /* Chicken Coop Attendant */;
+			targetProxy = 46A18C0C2001257000607550 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		46A18BF32001257000607550 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				46A18BF42001257000607550 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		46A18BF82001257000607550 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				46A18BF92001257000607550 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		46A18C122001257000607550 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		46A18C132001257000607550 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		46A18C152001257000607550 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 827X6EX4EU;
+				INFOPLIST_FILE = "Chicken Coop Attendant/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "KDot.Chicken-Coop-Attendant";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		46A18C162001257000607550 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 827X6EX4EU;
+				INFOPLIST_FILE = "Chicken Coop Attendant/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "KDot.Chicken-Coop-Attendant";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		46A18C182001257000607550 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 827X6EX4EU;
+				INFOPLIST_FILE = "Chicken Coop AttendantTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "KDot.Chicken-Coop-AttendantTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chicken Coop Attendant.app/Chicken Coop Attendant";
+			};
+			name = Debug;
+		};
+		46A18C192001257000607550 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 827X6EX4EU;
+				INFOPLIST_FILE = "Chicken Coop AttendantTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "KDot.Chicken-Coop-AttendantTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chicken Coop Attendant.app/Chicken Coop Attendant";
+			};
+			name = Release;
+		};
+		46A18C1B2001257000607550 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 827X6EX4EU;
+				INFOPLIST_FILE = "Chicken Coop AttendantUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "KDot.Chicken-Coop-AttendantUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Chicken Coop Attendant";
+			};
+			name = Debug;
+		};
+		46A18C1C2001257000607550 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 827X6EX4EU;
+				INFOPLIST_FILE = "Chicken Coop AttendantUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "KDot.Chicken-Coop-AttendantUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Chicken Coop Attendant";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		46A18BE72001257000607550 /* Build configuration list for PBXProject "Chicken Coop Attendant" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46A18C122001257000607550 /* Debug */,
+				46A18C132001257000607550 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		46A18C142001257000607550 /* Build configuration list for PBXNativeTarget "Chicken Coop Attendant" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46A18C152001257000607550 /* Debug */,
+				46A18C162001257000607550 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		46A18C172001257000607550 /* Build configuration list for PBXNativeTarget "Chicken Coop AttendantTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46A18C182001257000607550 /* Debug */,
+				46A18C192001257000607550 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		46A18C1A2001257000607550 /* Build configuration list for PBXNativeTarget "Chicken Coop AttendantUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46A18C1B2001257000607550 /* Debug */,
+				46A18C1C2001257000607550 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 46A18BE42001257000607550 /* Project object */;
+}
