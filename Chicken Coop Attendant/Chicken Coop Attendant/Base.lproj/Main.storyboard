@@ -116,8 +116,12 @@
                                     <segue destination="Kfk-4Z-BNW" kind="show" id="b33-OA-zbt"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="intCoop" translatesAutoresizingMaskIntoConstraints="NO" id="1D7-27-dXf">
+                                <rect key="frame" x="67" y="356" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.77793548619407671" green="0.80166758439340091" blue="0.50416650994907952" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.80166758439340091" green="0.60916112176038539" blue="0.31247714896808526" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="wmf-4d-sg8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="41" id="12o-dy-fOR"/>
                             <constraint firstItem="g06-G1-Yt6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="112" id="3PT-pZ-RwS"/>
@@ -610,4 +614,7 @@
             <point key="canvasLocation" x="416.80000000000001" y="886.50674662668678"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="intCoop" width="480" height="317"/>
+    </resources>
 </document>
