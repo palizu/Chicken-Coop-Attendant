@@ -38,6 +38,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var solarButton: UIButton!
     @IBOutlet weak var statsButton: UIButton!
+    @IBOutlet weak var photoImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
