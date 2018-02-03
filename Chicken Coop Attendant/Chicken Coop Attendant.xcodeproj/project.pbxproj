@@ -14,6 +14,8 @@
 		46A18BFA2001257000607550 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46A18BF82001257000607550 /* LaunchScreen.storyboard */; };
 		46A18C052001257000607550 /* Chicken_Coop_AttendantTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A18C042001257000607550 /* Chicken_Coop_AttendantTests.swift */; };
 		46A18C102001257000607550 /* Chicken_Coop_AttendantUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A18C0F2001257000607550 /* Chicken_Coop_AttendantUITests.swift */; };
+		46AF446B2026158200B72BF8 /* CoopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AF446A2026158200B72BF8 /* CoopTableViewCell.swift */; };
+		46AF446D202615A000B72BF8 /* SolarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AF446C202615A000B72BF8 /* SolarTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		46A18C0B2001257000607550 /* Chicken Coop AttendantUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Chicken Coop AttendantUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		46A18C0F2001257000607550 /* Chicken_Coop_AttendantUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chicken_Coop_AttendantUITests.swift; sourceTree = "<group>"; };
 		46A18C112001257000607550 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46AF446A2026158200B72BF8 /* CoopTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoopTableViewCell.swift; sourceTree = "<group>"; };
+		46AF446C202615A000B72BF8 /* SolarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolarTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 			children = (
 				46A18BEF2001257000607550 /* AppDelegate.swift */,
 				46A18BF12001257000607550 /* ViewController.swift */,
+				46AF446A2026158200B72BF8 /* CoopTableViewCell.swift */,
+				46AF446C202615A000B72BF8 /* SolarTableViewCell.swift */,
 				46A18BF32001257000607550 /* Main.storyboard */,
 				46A18BF62001257000607550 /* Assets.xcassets */,
 				46A18BF82001257000607550 /* LaunchScreen.storyboard */,
@@ -261,6 +267,8 @@
 			files = (
 				46A18BF22001257000607550 /* ViewController.swift in Sources */,
 				46A18BF02001257000607550 /* AppDelegate.swift in Sources */,
+				46AF446B2026158200B72BF8 /* CoopTableViewCell.swift in Sources */,
+				46AF446D202615A000B72BF8 /* SolarTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
