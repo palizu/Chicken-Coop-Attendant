@@ -9,7 +9,14 @@
 import UIKit
 
 class CoopTableViewCell: UITableViewCell {
-
+    
+    // Mark: Properties
+    @IBOutlet weak var statName: UILabel!
+    @IBOutlet weak var status: UILabel!
+    
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

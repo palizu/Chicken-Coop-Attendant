@@ -9,7 +9,13 @@
 import UIKit
 
 class SolarTableViewCell: UITableViewCell {
-
+    
+    // Mark: Properties
+    @IBOutlet weak var gps: UILabel!
+    @IBOutlet weak var extData: UILabel!
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
