@@ -15,11 +15,11 @@ class Coop {
     
     var name: String
     var data: Bool
-    var status: UILabel?
-    
+    var status: String?
+
     // Mark: Initializer
     
-    init?(name: String, data: Bool, status: UILabel?){
+    init?(name: String, data: Bool, status: String){
         
         // The name must not be empty
         guard !name.isEmpty else {
@@ -27,6 +27,10 @@ class Coop {
             return nil
         }
         
+        guard !status.isEmpty else {
+            
+            return nil
+        }
         // The Data displayed must be a boolean value of either On/Off.
         
         // Initialize stored properties
@@ -35,3 +39,4 @@ class Coop {
         self.status = status
     }
 }
+
