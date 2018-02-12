@@ -96,7 +96,6 @@ class CoopTableViewController: UITableViewController {
     private func loadCoopStats() {
         
         // variables that will hold boolean value and translate that to on/off based on electric current in PI.
-        
         let status1 = UILabel(named: "onOff")
         let status2 = UILabel(named: "onOff")
         let status3 = UILabel(named: "onOff")
@@ -108,6 +107,7 @@ class CoopTableViewController: UITableViewController {
         let status9 = UILabel(named: "onOff")
         let status10 = UILabel(named: "onOff")
         let status11 = UILabel(named: "onOff")
+ 
  
         guard let stat1 = Coop(name: "Door Automation", status: status1) else {
             fatalError("Unable to instantiate stat1")

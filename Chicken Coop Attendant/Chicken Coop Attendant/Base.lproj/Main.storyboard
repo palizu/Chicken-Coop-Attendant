@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yCg-aI-l5m">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--The Helm-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Chicken_Coop_Attendant" customModuleProvider="target" sceneMemberID="viewController">
@@ -176,9 +176,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="157" height="30"/>
                                                 <state key="normal" title="Display Solar Statistics"/>
                                                 <connections>
-                                                    <segue destination="035-nY-anY" kind="popoverPresentation" popoverAnchorView="Xc8-yE-PA2" id="ASF-Mx-F4D">
-                                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                                    </segue>
+                                                    <segue destination="035-nY-anY" kind="show" id="ve0-m7-jtB"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGN-Rb-ahT">
@@ -196,6 +194,7 @@
                         <color key="backgroundColor" red="0.80166758439340091" green="0.60916112176038539" blue="0.31247714896808526" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="The Helm" id="MrV-wo-JaR"/>
                     <connections>
                         <outlet property="appTitle" destination="1TP-pR-zhM" id="tdh-oA-OXe"/>
                         <outlet property="autoLabel" destination="aOp-bp-dZa" id="PeP-Iz-CjF"/>
@@ -220,7 +219,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
+            <point key="canvasLocation" x="376.80000000000001" y="35.532233883058474"/>
         </scene>
         <!--Solar Statistics-->
         <scene sceneID="lMU-ao-BIv">
@@ -268,7 +267,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DFp-PA-qST" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="848.79999999999995" y="35.532233883058474"/>
+            <point key="canvasLocation" x="1188" y="35.532233883058474"/>
         </scene>
         <!--Coop Statistics-->
         <scene sceneID="4VG-WW-0bH">
@@ -320,6 +319,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vck-Uc-EEO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="416.80000000000001" y="886.50674662668678"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eZD-7f-Lrk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yCg-aI-l5m" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gUT-I8-DXV">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="pTM-ar-H3Q"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jNb-V6-dam" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-385" y="36"/>
         </scene>
     </scenes>
     <resources>
