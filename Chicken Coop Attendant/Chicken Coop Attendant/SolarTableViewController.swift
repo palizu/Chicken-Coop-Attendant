@@ -100,38 +100,60 @@ class SolarTableViewController: UITableViewController {
     }
     */
     
+    // Get solar statistics
+    var sunInfo = EDSunriseSet.sunriseset(withTimezone: timeZone, latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+    let dateFormatter = DateFormatter()
+    
+    // get the current date and time
+    let currentDateTime = Date()
+    
+    // get the user's calendar
+    let userCalendar = Calendar.current
+    
+    // choose which date and time components are needed
+    let requestedComponents: Set<Calendar.Component> = [
+        .year,
+        .month,
+        .day,
+        .hour,
+        .minute,
+        .second
+    ]
+    
+    // get the components
+    let dateTimeComponents = userCalendar.dateComponents(requestedComponents, from: currentDateTime)
+    
+    /* Now the components are available to implement
+    dateTimeComponents.year   // 2018
+    dateTimeComponents.month  // 10
+    dateTimeComponents.day    // 8
+    dateTimeComponents.hour   // 22
+    dateTimeComponents.minute // 42
+    dateTimeComponents.second // 17
+    */
+    
     private func loadSolarStats() {
         
-        // variables that will hold boolean value and translate that to on/off based on electric current in PI.
+        // variables that will hold data pertaining to the name.
         let status1 = UILabel(named: "data")
-        let status2 = UILabel(named: "data")
-        let status3 = UILabel(named: "data")
+        let currentDate = "\(dateTimeComponents.month)/\(dateTimeComponents.day)/\(dateTimeComponents.year)" // 6/22/18
+        let time = "\(dateTimeComponents.hour):\(dateTimeComponents.minute):\(dateTimeComponents.second)" // 10:30:35
         let status4 = UILabel(named: "data")
         let status5 = UILabel(named: "data")
         let status6 = UILabel(named: "data")
         let status7 = UILabel(named: "data")
         let status8 = UILabel(named: "data")
         
-        /*
-         if data == true {
-         
-         let status1 = UILabel(named: "on/off" = "on")
-         
-         } else {
-         
-         let status1 = UILabel(named: "on/off" = "off")
-         }
-         */
         
         guard let stat1 = Solar(name: "GPS Location:", status: status1) else {
             fatalError("Unable to instantiate stat1")
         }
         
-        guard let stat2 = Solar(name: "Today's Date:", status: status2) else {
+        guard let stat2 = Solar(name: "Today's Date:", data: currentDate) else {
             fatalError("Unable to instantiate stat2")
         }
         
-        guard let stat3 = Solar(name: "Current Local Time:", status: status3) else {
+        guard let stat3 = Solar(name: "Current Local Time:", data: time) else {
             fatalError("Unable to instantiate stat3")
         }
         
@@ -157,4 +179,5 @@ class SolarTableViewController: UITableViewController {
         
         solarStats += [stat1, stat2, stat3, stat4, stat5, stat6, stat7, stat8]
     }
+    
 }

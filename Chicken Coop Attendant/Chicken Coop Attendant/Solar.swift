@@ -36,4 +36,5 @@ class Solar {
         self.name = name
         self.data = data
     }
+    
 }
