@@ -16,6 +16,7 @@ class Solar {
     var name: String
     var data: String
     
+    
     // Mark: Initializer
     
     init?(name: String, data: String){
@@ -35,6 +36,7 @@ class Solar {
         // Initialize stored properties
         self.name = name
         self.data = data
+    
     }
     
 }

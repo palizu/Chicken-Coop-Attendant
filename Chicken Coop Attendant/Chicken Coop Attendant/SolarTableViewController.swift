@@ -100,9 +100,7 @@ class SolarTableViewController: UITableViewController {
     }
     */
     
-    // Get solar statistics
-    var sunInfo = EDSunriseSet.sunriseset(withTimezone: timeZone, latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-    let dateFormatter = DateFormatter()
+    // Mark: Load Data
     
     // get the current date and time
     let currentDateTime = Date()
@@ -121,7 +119,8 @@ class SolarTableViewController: UITableViewController {
     ]
     
     // get the components
-    let dateTimeComponents = userCalendar.dateComponents(requestedComponents, from: currentDateTime)
+    //You can't use bounds in a let because it doesn't exist when that property is created because it belongs to self. So at init self isn't complete yet. But if you use a lazy var, then self and its property bounds will be ready by the time you need it.
+    lazy var dateTimeComponents = userCalendar.dateComponents(requestedComponents, from: currentDateTime)
     
     /* Now the components are available to implement
     dateTimeComponents.year   // 2018
@@ -132,12 +131,14 @@ class SolarTableViewController: UITableViewController {
     dateTimeComponents.second // 17
     */
     
+    
     private func loadSolarStats() {
         
         // variables that will hold data pertaining to the name.
         let status1 = UILabel(named: "data")
-        let currentDate = "\(dateTimeComponents.month)/\(dateTimeComponents.day)/\(dateTimeComponents.year)" // 6/22/18
-        let time = "\(dateTimeComponents.hour):\(dateTimeComponents.minute):\(dateTimeComponents.second)" // 10:30:35
+        // ?? 00 sets a default case incase the variable can not be established.
+        let currentDate = "\(dateTimeComponents.month ?? 00)/\(dateTimeComponents.day ?? 00)/\(dateTimeComponents.year ?? 00)" // 6/22/18
+        let time = "\(dateTimeComponents.hour ?? 00):\(dateTimeComponents.minute ?? 00):\(dateTimeComponents.second ?? 00)" // 10:30:35
         let status4 = UILabel(named: "data")
         let status5 = UILabel(named: "data")
         let status6 = UILabel(named: "data")
