@@ -230,7 +230,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SolarTableViewCell" id="EAc-eS-Cme" customClass="SolarTableViewCell" customModule="Chicken_Coop_Attendant" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SolarTableViewCell" id="EAc-eS-Cme" customClass="SolarTableViewCell" customModule="Chicken_Coop_Attendant" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="77"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EAc-eS-Cme" id="VnP-x9-8er">
@@ -254,8 +254,10 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="data" destination="gIB-YX-0Vo" id="Rp4-53-v4W"/>
                                     <outlet property="extData" destination="gIB-YX-0Vo" id="Qvf-6b-2Tp"/>
                                     <outlet property="gps" destination="mYS-gn-LuI" id="Qux-gS-TPa"/>
+                                    <outlet property="statName" destination="mYS-gn-LuI" id="uV9-QU-V6o"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -278,7 +280,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CoopTableViewCell" id="27t-RT-3Ya" customClass="CoopTableViewCell" customModule="Chicken_Coop_Attendant" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CoopTableViewCell" id="27t-RT-3Ya" customClass="CoopTableViewCell" customModule="Chicken_Coop_Attendant" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="56"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="27t-RT-3Ya" id="4pX-KT-3B6">

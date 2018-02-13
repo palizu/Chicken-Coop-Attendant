@@ -14,11 +14,11 @@ class Solar {
     // Mark: Properties
     
     var name: String
-    var data: Float
+    var data: String
     
     // Mark: Initializer
     
-    init?(name: String, data: Float){
+    init?(name: String, data: String){
         
         // The name must not be empty
         guard !name.isEmpty else {
@@ -27,7 +27,7 @@ class Solar {
         }
         
         // The Data displayed must be in a similar format
-        guard !data.isFinite else {
+        guard !data.isEmpty else {
             
             return nil
         }

@@ -50,7 +50,6 @@ class CoopTableViewController: UITableViewController {
         let stat = coopStats[indexPath.row]
         
         
-        
         // Configure the cell
         cell.statName.text = stat.name
         cell.status.text = stat.status

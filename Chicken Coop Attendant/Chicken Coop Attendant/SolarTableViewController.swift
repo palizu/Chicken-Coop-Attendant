@@ -10,14 +10,13 @@ import UIKit
 
 class SolarTableViewController: UITableViewController {
 
+    let solarStats = [Solar]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        // Load solar statistics
+        loadSolarStats()
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,24 +27,33 @@ class SolarTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        
+        
+        return solarStats.count
     }
 
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
-        // Configure the cell...
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cellIdentifier = "SolarTableViewCell"
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? SolarTableViewCell else {
+            fatalError("The dequeued cell is not an instance of SolarTableViewCell.")
+        }
+        
+        let stat = solarStats[indexPath.row]
+
+        // Configure the cell
+        cell.statName.text = stat.name
+        cell.data.text = stat.data
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -91,5 +99,62 @@ class SolarTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    private func loadSolarStats() {
+        
+        // variables that will hold boolean value and translate that to on/off based on electric current in PI.
+        let status1 = UILabel(named: "data")
+        let status2 = UILabel(named: "data")
+        let status3 = UILabel(named: "data")
+        let status4 = UILabel(named: "data")
+        let status5 = UILabel(named: "data")
+        let status6 = UILabel(named: "data")
+        let status7 = UILabel(named: "data")
+        let status8 = UILabel(named: "data")
+        
+        /*
+         if data == true {
+         
+         let status1 = UILabel(named: "on/off" = "on")
+         
+         } else {
+         
+         let status1 = UILabel(named: "on/off" = "off")
+         }
+         */
+        
+        guard let stat1 = Solar(name: "GPS Location:", status: status1) else {
+            fatalError("Unable to instantiate stat1")
+        }
+        
+        guard let stat2 = Solar(name: "Today's Date:", status: status2) else {
+            fatalError("Unable to instantiate stat2")
+        }
+        
+        guard let stat3 = Solar(name: "Current Local Time:", status: status3) else {
+            fatalError("Unable to instantiate stat3")
+        }
+        
+        guard let stat4 = Solar(name: "Sun Rise:", status: status4) else {
+            fatalError("Unable to instantiate stat4")
+        }
+        
+        guard let stat5 = Solar(name: "Sun Set:", status: status5) else {
+            fatalError("Unable to instantiate stat5")
+        }
+        
+        guard let stat6 = Solar(name: "First Light:", status: status6) else {
+            fatalError("Unable to instantiate stat6")
+        }
+        
+        guard let stat7 = Solar(name: "Last Light:", status: status7) else {
+            fatalError("Unable to instantiate stat7")
+        }
+        
+        guard let stat8 = Solar(name: "Day Length:", status: status8) else {
+            fatalError("Unable to instantiate stat8")
+        }
+        
+        solarStats += [stat1, stat2, stat3, stat4, stat5, stat6, stat7, stat8]
+    }
 }

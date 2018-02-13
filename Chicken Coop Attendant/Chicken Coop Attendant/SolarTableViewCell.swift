@@ -11,8 +11,8 @@ import UIKit
 class SolarTableViewCell: UITableViewCell {
     
     // Mark: Properties
-    @IBOutlet weak var gps: UILabel!
-    @IBOutlet weak var extData: UILabel!
+    @IBOutlet weak var statName: UILabel!
+    @IBOutlet weak var data: UILabel!
     
     
     
