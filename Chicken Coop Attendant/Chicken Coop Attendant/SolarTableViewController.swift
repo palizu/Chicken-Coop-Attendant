@@ -6,7 +6,12 @@
 //  Copyright © 2018 riOS. All rights reserved.
 //
 
+/* References:
+ https://developer.apple.com/documentation/corelocation/cllocation
+ */
+
 import UIKit
+import CoreLocation
 
 class SolarTableViewController: UITableViewController {
 
@@ -102,7 +107,31 @@ class SolarTableViewController: UITableViewController {
     
     // Mark: Load Data
     
-    // get the current date and time
+    // Initializes and returns a location object with the specified latitude and longitude.
+    
+    init(latitude: CLLocationDegrees, longitude: CLLocationDegrees){
+    
+    }
+    
+    init(coordinate: CLLocationCoordinate2D, altitude: CLLocationDistance, horizontalAccuracy: CLLocationAccuracy, verticalAccuracy: CLLocationAccuracy, timestamp: Date) {
+        
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    // Get the location attributes
+    
+    var coordinate: CLLocationCoordinate2D
+    var altitude: CLLocationDistance
+    // var floor: CLFloor? // The logical floor of a building in which the user is located.
+    var horizontalAccuracy: CLLocationAccuracy
+    var verticalAccuracy: CLLocationAccuracy
+    var timestamp: Date
+    
+    
+    // Get the current date and time
     let currentDateTime = Date()
     
     // get the user's calendar
@@ -135,18 +164,18 @@ class SolarTableViewController: UITableViewController {
     private func loadSolarStats() {
         
         // variables that will hold data pertaining to the name.
-        let status1 = UILabel(named: "data")
+        let position = String(describing: coordinate) // gps
         // ?? 00 sets a default case incase the variable can not be established.
         let currentDate = "\(dateTimeComponents.month ?? 00)/\(dateTimeComponents.day ?? 00)/\(dateTimeComponents.year ?? 00)" // 6/22/18
         let time = "\(dateTimeComponents.hour ?? 00):\(dateTimeComponents.minute ?? 00):\(dateTimeComponents.second ?? 00)" // 10:30:35
-        let status4 = UILabel(named: "data")
-        let status5 = UILabel(named: "data")
-        let status6 = UILabel(named: "data")
-        let status7 = UILabel(named: "data")
-        let status8 = UILabel(named: "data")
+        let status4 = UILabel(named: "data") // sunrise
+        let status5 = UILabel(named: "data") // sunset
+        let status6 = UILabel(named: "data") // first light
+        let status7 = UILabel(named: "data") // last light
+        let status8 = UILabel(named: "data") // day length
         
         
-        guard let stat1 = Solar(name: "GPS Location:", status: status1) else {
+        guard let stat1 = Solar(name: "GPS Location:", data: position) else {
             fatalError("Unable to instantiate stat1")
         }
         
