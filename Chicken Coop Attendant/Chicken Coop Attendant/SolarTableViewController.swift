@@ -8,6 +8,11 @@
 
 /* References:
  https://developer.apple.com/documentation/corelocation/cllocation
+ https://spin.atomicobject.com/2015/03/09/ios-sunrise-sunset-corelocation/
+ https://developer.apple.com/library/content/documentation/Swift/Conceptual/BuildingCocoaApps/Migration.html
+ https://stackoverflow.com/questions/24063798/cllocation-manager-in-swift-to-get-location-of-user
+ https://developer.apple.com/library/content/documentation/Swift/Conceptual/BuildingCocoaApps/MixandMatch.html
+ https://stackoverflow.com/questions/33964013/trying-to-use-the-edsunriseset-sdk-on-swift-but-getting-weird-sunset-times
  */
 
 import UIKit
@@ -22,6 +27,14 @@ class SolarTableViewController: UITableViewController {
 
         // Load solar statistics
         loadSolarStats()
+        
+        // Get permissions for Location features.
+        let locationManager = CLLocationManager()
+        locationManager.delegate = self as? CLLocationManagerDelegate
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestAlwaysAuthorization()
+        locationManager.startUpdatingLocation()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -107,6 +120,7 @@ class SolarTableViewController: UITableViewController {
     
     // Mark: Load Data
     
+//------------------------------------------Location---------------------------------------//
     // Initializes and returns a location object with the specified latitude and longitude.
     
     init(latitude: CLLocationDegrees, longitude: CLLocationDegrees){
@@ -160,7 +174,22 @@ class SolarTableViewController: UITableViewController {
     dateTimeComponents.second // 17
     */
     
+//-------------------------Sunrise/Sunset using CoreLocation-------------------------------//
+
+    // Receive the data
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations:[CLLocation]) {
+    }
     
+    // Incorporate the Data
+    var sunInfo = EDSunriseSet.sunriseset(withTimezone: timeZone, latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+    
+    // Call the methods
+    var NTwilight = sunInfo.calculateNauticalTwilight(Date())
+    var todaySunrise = sunInfo.calculateSunrise(Date())
+    var todaySunset = sunInfo.calculateSunset(Date())
+    
+    
+//--------------------------------Load TableView-------------------------------------------//
     private func loadSolarStats() {
         
         // variables that will hold data pertaining to the name.
@@ -168,10 +197,10 @@ class SolarTableViewController: UITableViewController {
         // ?? 00 sets a default case incase the variable can not be established.
         let currentDate = "\(dateTimeComponents.month ?? 00)/\(dateTimeComponents.day ?? 00)/\(dateTimeComponents.year ?? 00)" // 6/22/18
         let time = "\(dateTimeComponents.hour ?? 00):\(dateTimeComponents.minute ?? 00):\(dateTimeComponents.second ?? 00)" // 10:30:35
-        let status4 = UILabel(named: "data") // sunrise
-        let status5 = UILabel(named: "data") // sunset
-        let status6 = UILabel(named: "data") // first light
-        let status7 = UILabel(named: "data") // last light
+        let sunrise = todaySunrise // sunrise
+        let sunset = todaySunset // sunset
+        let status6 = UILabel(named: "data") // Nautical Dawn
+        let nauticalTwilight = NTwilight // Nautical Dusk
         let status8 = UILabel(named: "data") // day length
         
         
@@ -187,11 +216,11 @@ class SolarTableViewController: UITableViewController {
             fatalError("Unable to instantiate stat3")
         }
         
-        guard let stat4 = Solar(name: "Sun Rise:", status: status4) else {
+        guard let stat4 = Solar(name: "Sun Rise:", status: sunrise) else {
             fatalError("Unable to instantiate stat4")
         }
         
-        guard let stat5 = Solar(name: "Sun Set:", status: status5) else {
+        guard let stat5 = Solar(name: "Sun Set:", status: sunset) else {
             fatalError("Unable to instantiate stat5")
         }
         
@@ -199,7 +228,7 @@ class SolarTableViewController: UITableViewController {
             fatalError("Unable to instantiate stat6")
         }
         
-        guard let stat7 = Solar(name: "Last Light:", status: status7) else {
+        guard let stat7 = Solar(name: "Last Light:", data: nauticalTwilight) else {
             fatalError("Unable to instantiate stat7")
         }
         
