@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09E6885224208CD591FBBD96 /* Pods_Chicken_Coop_AttendantTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6543963DA185F250BAE3C35E /* Pods_Chicken_Coop_AttendantTests.framework */; };
+		46441BD120A4798B0042C3FD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 46441BD020A4798B0042C3FD /* GoogleService-Info.plist */; };
 		4656DF81206EB7980010112A /* EDSunriseSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 4656DF7F206EB7980010112A /* EDSunriseSet.m */; };
 		4656DF82206EB7980010112A /* EDSunriseSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 4656DF7F206EB7980010112A /* EDSunriseSet.m */; };
 		4656DF83206EB7980010112A /* EDSunriseSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 4656DF7F206EB7980010112A /* EDSunriseSet.m */; };
@@ -23,6 +25,8 @@
 		46AF44732026232200B72BF8 /* CoopTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AF44722026232200B72BF8 /* CoopTableViewController.swift */; };
 		46AF44752026233100B72BF8 /* SolarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AF44742026233100B72BF8 /* SolarTableViewController.swift */; };
 		46AF44772026233B00B72BF8 /* Solar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AF44762026233B00B72BF8 /* Solar.swift */; };
+		794B7D798D60BE795378CD50 /* Pods_Chicken_Coop_AttendantUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A98B94A7C07834C2B09AA09 /* Pods_Chicken_Coop_AttendantUITests.framework */; };
+		C7F982D5F542D3799F80CF99 /* Pods_Chicken_Coop_Attendant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4255DB2921DA75DDBEFAAE0B /* Pods_Chicken_Coop_Attendant.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +47,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		053AE8AC46ED87050AD6F345 /* Pods-Chicken Coop AttendantTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chicken Coop AttendantTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chicken Coop AttendantTests/Pods-Chicken Coop AttendantTests.release.xcconfig"; sourceTree = "<group>"; };
+		4255DB2921DA75DDBEFAAE0B /* Pods_Chicken_Coop_Attendant.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chicken_Coop_Attendant.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		46441BD020A4798B0042C3FD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4656DF7C206EB7970010112A /* Chicken Coop Attendant-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Chicken Coop Attendant-Bridging-Header.h"; sourceTree = "<group>"; };
 		4656DF7D206EB7970010112A /* Chicken Coop AttendantTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Chicken Coop AttendantTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		4656DF7E206EB7970010112A /* Chicken Coop AttendantUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Chicken Coop AttendantUITests-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -67,6 +74,13 @@
 		46AF44722026232200B72BF8 /* CoopTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoopTableViewController.swift; sourceTree = "<group>"; };
 		46AF44742026233100B72BF8 /* SolarTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolarTableViewController.swift; sourceTree = "<group>"; };
 		46AF44762026233B00B72BF8 /* Solar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solar.swift; sourceTree = "<group>"; };
+		4EE14064EEE24A3619FEA760 /* Pods-Chicken Coop Attendant.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chicken Coop Attendant.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chicken Coop Attendant/Pods-Chicken Coop Attendant.debug.xcconfig"; sourceTree = "<group>"; };
+		6543963DA185F250BAE3C35E /* Pods_Chicken_Coop_AttendantTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chicken_Coop_AttendantTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93BFBDDEB4098E91B67C0BFE /* Pods-Chicken Coop AttendantUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chicken Coop AttendantUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chicken Coop AttendantUITests/Pods-Chicken Coop AttendantUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9A98B94A7C07834C2B09AA09 /* Pods_Chicken_Coop_AttendantUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chicken_Coop_AttendantUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9A8E4DDB05D76658EFB67E4 /* Pods-Chicken Coop Attendant.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chicken Coop Attendant.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chicken Coop Attendant/Pods-Chicken Coop Attendant.release.xcconfig"; sourceTree = "<group>"; };
+		B8EA58904DA4C36216BE69B2 /* Pods-Chicken Coop AttendantTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chicken Coop AttendantTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chicken Coop AttendantTests/Pods-Chicken Coop AttendantTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DA499DF04ADE064AB16791E1 /* Pods-Chicken Coop AttendantUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chicken Coop AttendantUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chicken Coop AttendantUITests/Pods-Chicken Coop AttendantUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7F982D5F542D3799F80CF99 /* Pods_Chicken_Coop_Attendant.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09E6885224208CD591FBBD96 /* Pods_Chicken_Coop_AttendantTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,12 +104,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				794B7D798D60BE795378CD50 /* Pods_Chicken_Coop_AttendantUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		352386105661B89292CC9AF9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4EE14064EEE24A3619FEA760 /* Pods-Chicken Coop Attendant.debug.xcconfig */,
+				A9A8E4DDB05D76658EFB67E4 /* Pods-Chicken Coop Attendant.release.xcconfig */,
+				B8EA58904DA4C36216BE69B2 /* Pods-Chicken Coop AttendantTests.debug.xcconfig */,
+				053AE8AC46ED87050AD6F345 /* Pods-Chicken Coop AttendantTests.release.xcconfig */,
+				93BFBDDEB4098E91B67C0BFE /* Pods-Chicken Coop AttendantUITests.debug.xcconfig */,
+				DA499DF04ADE064AB16791E1 /* Pods-Chicken Coop AttendantUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		46A18BE32001257000607550 = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +136,8 @@
 				4656DF7C206EB7970010112A /* Chicken Coop Attendant-Bridging-Header.h */,
 				4656DF7D206EB7970010112A /* Chicken Coop AttendantTests-Bridging-Header.h */,
 				4656DF7E206EB7970010112A /* Chicken Coop AttendantUITests-Bridging-Header.h */,
+				352386105661B89292CC9AF9 /* Pods */,
+				75D80F8472C4684380AD47CF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,6 +163,7 @@
 				46AF446C202615A000B72BF8 /* SolarTableViewCell.swift */,
 				46AF44742026233100B72BF8 /* SolarTableViewController.swift */,
 				46A18BF32001257000607550 /* Main.storyboard */,
+				46441BD020A4798B0042C3FD /* GoogleService-Info.plist */,
 				46A18BF62001257000607550 /* Assets.xcassets */,
 				46A18BF82001257000607550 /* LaunchScreen.storyboard */,
 				46A18BFB2001257000607550 /* Info.plist */,
@@ -156,6 +189,16 @@
 			path = "Chicken Coop AttendantUITests";
 			sourceTree = "<group>";
 		};
+		75D80F8472C4684380AD47CF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4255DB2921DA75DDBEFAAE0B /* Pods_Chicken_Coop_Attendant.framework */,
+				6543963DA185F250BAE3C35E /* Pods_Chicken_Coop_AttendantTests.framework */,
+				9A98B94A7C07834C2B09AA09 /* Pods_Chicken_Coop_AttendantUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -163,9 +206,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 46A18C142001257000607550 /* Build configuration list for PBXNativeTarget "Chicken Coop Attendant" */;
 			buildPhases = (
+				124DFED550EDC33A439083CA /* [CP] Check Pods Manifest.lock */,
 				46A18BE82001257000607550 /* Sources */,
 				46A18BE92001257000607550 /* Frameworks */,
 				46A18BEA2001257000607550 /* Resources */,
+				65814D8610445933B2FF71EC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -180,6 +225,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 46A18C172001257000607550 /* Build configuration list for PBXNativeTarget "Chicken Coop AttendantTests" */;
 			buildPhases = (
+				C5B44303DAF26D015E2F533E /* [CP] Check Pods Manifest.lock */,
 				46A18BFC2001257000607550 /* Sources */,
 				46A18BFD2001257000607550 /* Frameworks */,
 				46A18BFE2001257000607550 /* Resources */,
@@ -198,6 +244,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 46A18C1A2001257000607550 /* Build configuration list for PBXNativeTarget "Chicken Coop AttendantUITests" */;
 			buildPhases = (
+				BFB180B76AEAA217BC7304B0 /* [CP] Check Pods Manifest.lock */,
 				46A18C072001257000607550 /* Sources */,
 				46A18C082001257000607550 /* Frameworks */,
 				46A18C092001257000607550 /* Resources */,
@@ -267,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46A18BFA2001257000607550 /* LaunchScreen.storyboard in Resources */,
+				46441BD120A4798B0042C3FD /* GoogleService-Info.plist in Resources */,
 				46A18BF72001257000607550 /* Assets.xcassets in Resources */,
 				46A18BF52001257000607550 /* Main.storyboard in Resources */,
 			);
@@ -287,6 +335,83 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		124DFED550EDC33A439083CA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Chicken Coop Attendant-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		65814D8610445933B2FF71EC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Chicken Coop Attendant/Pods-Chicken Coop Attendant-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Chicken Coop Attendant/Pods-Chicken Coop Attendant-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BFB180B76AEAA217BC7304B0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Chicken Coop AttendantUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C5B44303DAF26D015E2F533E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Chicken Coop AttendantTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		46A18BE82001257000607550 /* Sources */ = {
@@ -467,6 +592,7 @@
 		};
 		46A18C152001257000607550 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4EE14064EEE24A3619FEA760 /* Pods-Chicken Coop Attendant.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -485,6 +611,7 @@
 		};
 		46A18C162001257000607550 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9A8E4DDB05D76658EFB67E4 /* Pods-Chicken Coop Attendant.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -502,6 +629,7 @@
 		};
 		46A18C182001257000607550 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8EA58904DA4C36216BE69B2 /* Pods-Chicken Coop AttendantTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -522,6 +650,7 @@
 		};
 		46A18C192001257000607550 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 053AE8AC46ED87050AD6F345 /* Pods-Chicken Coop AttendantTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -541,6 +670,7 @@
 		};
 		46A18C1B2001257000607550 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93BFBDDEB4098E91B67C0BFE /* Pods-Chicken Coop AttendantUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -560,6 +690,7 @@
 		};
 		46A18C1C2001257000607550 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA499DF04ADE064AB16791E1 /* Pods-Chicken Coop AttendantUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
