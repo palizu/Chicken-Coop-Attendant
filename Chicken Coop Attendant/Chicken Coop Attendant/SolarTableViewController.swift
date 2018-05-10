@@ -6,21 +6,14 @@
 //  Copyright © 2018 riOS. All rights reserved.
 //
 
-/* References:
- https://developer.apple.com/documentation/corelocation/cllocation
- https://spin.atomicobject.com/2015/03/09/ios-sunrise-sunset-corelocation/
- https://developer.apple.com/library/content/documentation/Swift/Conceptual/BuildingCocoaApps/Migration.html
- https://stackoverflow.com/questions/24063798/cllocation-manager-in-swift-to-get-location-of-user
- https://developer.apple.com/library/content/documentation/Swift/Conceptual/BuildingCocoaApps/MixandMatch.html
- https://stackoverflow.com/questions/33964013/trying-to-use-the-edsunriseset-sdk-on-swift-but-getting-weird-sunset-times
- */
-
 import UIKit
 import CoreLocation
+import CoreFoundation
 
 class SolarTableViewController: UITableViewController {
-
+    
     let solarStats = [Solar]()
+    var locationManager: CLLocationManager!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,17 +21,20 @@ class SolarTableViewController: UITableViewController {
         // Load solar statistics
         loadSolarStats()
         
-        // Get permissions for Location features.
-        let locationManager = CLLocationManager()
-        locationManager.delegate = self as? CLLocationManagerDelegate
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestAlwaysAuthorization()
-        locationManager.startUpdatingLocation()
-        
-    }
+        // Checks permissions for Location features, if enabled execute the following initializers and assignment statements.
+        if (CLLocationManager.locationServicesEnabled()){
+            
+            let locationManager = CLLocationManager()
+            locationManager.delegate = self as? CLLocationManagerDelegate
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.requestAlwaysAuthorization()
+            locationManager.startUpdatingLocation()
+            }
+        }
+    
 
     override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+        didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
@@ -123,16 +119,19 @@ class SolarTableViewController: UITableViewController {
 //------------------------------------------Location---------------------------------------//
     // Initializes and returns a location object with the specified latitude and longitude.
     
-    init(latitude: CLLocationDegrees, longitude: CLLocationDegrees){
     
-    }
-    
-    init(coordinate: CLLocationCoordinate2D, altitude: CLLocationDistance, horizontalAccuracy: CLLocationAccuracy, verticalAccuracy: CLLocationAccuracy, timestamp: Date) {
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
     }
     
+    
+    // A couple of initializers
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+        
+    init(coordinate: CLLocationCoordinate2D, altitude: CLLocationDistance, horizontalAccuracy: CLLocationAccuracy, verticalAccuracy: CLLocationAccuracy, timestamp: Date) {
+        
     }
     
     // Get the location attributes
@@ -143,7 +142,8 @@ class SolarTableViewController: UITableViewController {
     var horizontalAccuracy: CLLocationAccuracy
     var verticalAccuracy: CLLocationAccuracy
     var timestamp: Date
-    
+    //var lat = NSNumber(double: self ?? 0)
+    //var lon = NSNumber(double: self ?? 0)
     
     // Get the current date and time
     let currentDateTime = Date()
@@ -161,33 +161,39 @@ class SolarTableViewController: UITableViewController {
         .second
     ]
     
-    // get the components
+    // Get the date components
     //You can't use bounds in a let because it doesn't exist when that property is created because it belongs to self. So at init self isn't complete yet. But if you use a lazy var, then self and its property bounds will be ready by the time you need it.
-    lazy var dateTimeComponents = userCalendar.dateComponents(requestedComponents, from: currentDateTime)
+    // Specify date components
+    var locations: [Double] = []
+    let userLocation:CLLocation = locations[0]
+    let long = userLocation.coordinate.longitude;
+    let lat = userLocation.coordinate.latitude;
+    var dateComponents = DateComponents()
     
     /* Now the components are available to implement
-    dateTimeComponents.year   // 2018
-    dateTimeComponents.month  // 10
-    dateTimeComponents.day    // 8
-    dateTimeComponents.hour   // 22
-    dateTimeComponents.minute // 42
-    dateTimeComponents.second // 17
+    dateComponents.year   // 2018
+    dateComponents.month  // 10
+    dateComponents.day    // 8
+    dateComponents.hour   // 22
+    dateComponents.minute // 42
+    dateComponents.second // 17
+     dateComponents.timeZone // EST (-5:00) TimeZone(abbreviation: "EST")
     */
     
-//-------------------------Sunrise/Sunset using CoreLocation-------------------------------//
+//-------------------------Sunrise/Sunset using CoreLocation and EDSunriseSet-------------------------------//
 
     // Receive the data
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations:[CLLocation]) {
-    }
+    var location = CLLocationCoordinate2D(latitude: coordinate, longitude: coordinate)
     
     // Incorporate the Data
-    var sunInfo = EDSunriseSet.sunriseset(withTimezone: timeZone, latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+    var sunInfo = EDSunriseSet.sunriseset(with: Date(), timezone: TimeZone(abbreviation: "EST"), latitude: , longitude: )
     
     // Call the methods
     var NTwilight = sunInfo.calculateNauticalTwilight(Date())
+    var NDawn = sunInfo.calculateNauticalDawn(Date())
     var todaySunrise = sunInfo.calculateSunrise(Date())
     var todaySunset = sunInfo.calculateSunset(Date())
-    
+    var nautDayLength = todaySunset - todaySunrise
     
 //--------------------------------Load TableView-------------------------------------------//
     private func loadSolarStats() {
@@ -195,13 +201,13 @@ class SolarTableViewController: UITableViewController {
         // variables that will hold data pertaining to the name.
         let position = String(describing: coordinate) // gps
         // ?? 00 sets a default case incase the variable can not be established.
-        let currentDate = "\(dateTimeComponents.month ?? 00)/\(dateTimeComponents.day ?? 00)/\(dateTimeComponents.year ?? 00)" // 6/22/18
-        let time = "\(dateTimeComponents.hour ?? 00):\(dateTimeComponents.minute ?? 00):\(dateTimeComponents.second ?? 00)" // 10:30:35
+        let currentDate = "\(dateComponents.month ?? 00)/\(dateComponents.day ?? 00)/\(dateComponents.year ?? 00)" // 6/22/18
+        let time = "\(dateComponents.hour ?? 00):\(dateComponents.minute ?? 00):\(dateComponents.second ?? 00)" // 10:30:35
         let sunrise = todaySunrise // sunrise
         let sunset = todaySunset // sunset
-        let status6 = UILabel(named: "data") // Nautical Dawn
+        let nauticalDawn = NDawn // Nautical Dawn
         let nauticalTwilight = NTwilight // Nautical Dusk
-        let status8 = UILabel(named: "data") // day length
+        let dLength = nautDayLength // day length
         
         
         guard let stat1 = Solar(name: "GPS Location:", data: position) else {
@@ -224,7 +230,7 @@ class SolarTableViewController: UITableViewController {
             fatalError("Unable to instantiate stat5")
         }
         
-        guard let stat6 = Solar(name: "First Light:", status: status6) else {
+        guard let stat6 = Solar(name: "First Light:", status: nauticalDawn) else {
             fatalError("Unable to instantiate stat6")
         }
         
@@ -232,11 +238,13 @@ class SolarTableViewController: UITableViewController {
             fatalError("Unable to instantiate stat7")
         }
         
-        guard let stat8 = Solar(name: "Day Length:", status: status8) else {
+        guard let stat8 = Solar(name: "Day Length:", status: dLength) else {
             fatalError("Unable to instantiate stat8")
         }
         
         solarStats += [stat1, stat2, stat3, stat4, stat5, stat6, stat7, stat8]
-    }
-    
+        }
 }
+
+    
+
