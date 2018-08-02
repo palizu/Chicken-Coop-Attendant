@@ -186,7 +186,7 @@ class SolarTableViewController: UITableViewController {
     var location = CLLocationCoordinate2D(latitude: coordinate, longitude: coordinate)
     
     // Incorporate the Data
-    var sunInfo = EDSunriseSet.sunriseset(with: Date(), timezone: TimeZone(abbreviation: "EST"), latitude: , longitude: )
+    var sunInfo = EDSunriseSet.sunriseset(with: Date(), timezone: TimeZone(abbreviation: "EST"), latitude: lat, longitude: long)
     
     // Call the methods
     var NTwilight = sunInfo.calculateNauticalTwilight(Date())
