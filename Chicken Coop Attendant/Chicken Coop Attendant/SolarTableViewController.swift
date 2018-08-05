@@ -9,11 +9,14 @@
 import UIKit
 import CoreLocation
 import CoreFoundation
+import MapKit
+
 
 class SolarTableViewController: UITableViewController {
     
     let solarStats = [Solar]()
-    var locationManager: CLLocationManager!
+    var locationManager = CLLocationManager()
+    var currentLocation: CLLocation!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,14 +27,15 @@ class SolarTableViewController: UITableViewController {
         // Checks permissions for Location features, if enabled execute the following initializers and assignment statements.
         if (CLLocationManager.locationServicesEnabled()){
             
-            let locationManager = CLLocationManager()
             locationManager.delegate = self as? CLLocationManagerDelegate
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.requestAlwaysAuthorization()
             locationManager.startUpdatingLocation()
+            currentLocation = locationManager.location
+            
+            print(location) // Not sure where this would print in the app.
             }
         }
-    
 
     override func didReceiveMemoryWarning() {
         didReceiveMemoryWarning()
@@ -120,11 +124,6 @@ class SolarTableViewController: UITableViewController {
     // Initializes and returns a location object with the specified latitude and longitude.
     
     
-    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        
-    }
-    
-    
     // A couple of initializers
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -164,11 +163,7 @@ class SolarTableViewController: UITableViewController {
     // Get the date components
     //You can't use bounds in a let because it doesn't exist when that property is created because it belongs to self. So at init self isn't complete yet. But if you use a lazy var, then self and its property bounds will be ready by the time you need it.
     // Specify date components
-    var locations: [Double] = []
-    let userLocation:CLLocation = locations[0]
-    let long = userLocation.coordinate.longitude;
-    let lat = userLocation.coordinate.latitude;
-    var dateComponents = DateComponents()
+     var dateComponents = DateComponents()
     
     /* Now the components are available to implement
     dateComponents.year   // 2018
@@ -181,15 +176,20 @@ class SolarTableViewController: UITableViewController {
     */
     
 //-------------------------Sunrise/Sunset using CoreLocation and EDSunriseSet-------------------------------//
-
+    
     // Receive the data
-    var location = CLLocationCoordinate2D(latitude: coordinate, longitude: coordinate)
+    
+    lazy var location = [CLLocationCoordinate2D]()
+    location = CLLocationCoordinate2D(latitude: currentLocation.coordinate.latitude, longitude: currentLocation.coordinate.longitude)
     
     // Incorporate the Data
-    var sunInfo = EDSunriseSet.sunriseset(with: Date(), timezone: TimeZone(abbreviation: "EST"), latitude: , longitude: )
+    
+    lazy var sunInfo = [EDSunriseSet]()
+    sunInfo = sunriseset(with: Date(), timezone: TimeZone(abbreviation: "EST"), latitude: location.latitude, longitude: location.longitude)
+    
     
     // Call the methods
-    var NTwilight = sunInfo.calculateNauticalTwilight(Date())
+    var NTwilight = EDSunriseSet.calculateNauticalTwilight(Date())
     var NDawn = sunInfo.calculateNauticalDawn(Date())
     var todaySunrise = sunInfo.calculateSunrise(Date())
     var todaySunset = sunInfo.calculateSunset(Date())
