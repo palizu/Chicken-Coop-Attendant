@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Function used for Firebase initialization and application initialization
     internal func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
         FirebaseApp.configure()
         return true
     }

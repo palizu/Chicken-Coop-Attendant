@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yCg-aI-l5m">
+=======
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yCg-aI-l5m">
+>>>>>>> 6dfc2bdacf3a1d0c8407678518a8a3342affd5ec
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -245,7 +249,7 @@
         <!--Solar Statistics-->
         <scene sceneID="lMU-ao-BIv">
             <objects>
-                <tableViewController title="Solar Statistics" id="035-nY-anY" sceneMemberID="viewController">
+                <tableViewController title="Solar Statistics" id="035-nY-anY" customClass="SolarTableViewController" customModule="Chicken_Coop_Attendant" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="77" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Zle-3d-vl2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -295,7 +299,7 @@
         <!--Coop Statistics-->
         <scene sceneID="4VG-WW-0bH">
             <objects>
-                <tableViewController title="Coop Statistics" id="Kfk-4Z-BNW" sceneMemberID="viewController">
+                <tableViewController title="Coop Statistics" id="Kfk-4Z-BNW" customClass="CoopTableViewController" customModule="Chicken_Coop_Attendant" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="56" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="c19-9s-0YC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
